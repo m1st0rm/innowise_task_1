@@ -31,7 +31,7 @@ class JsonParserTest(unittest.TestCase):
             ]
         )
 
-        self.empty_data = json.dumps([])  # Empty JSON array
+        self.empty_data = json.dumps([])
 
     @patch("builtins.open", new_callable=mock_open)
     def test_read_rooms_file(self, mock_file):

@@ -1,0 +1,17 @@
+
+2024-08-29 15:57:29,177 - json_parser - INFO - Reading rooms data from file: fake_path
+2024-08-29 15:57:29,179 - json_parser - INFO - Successfully parsed 2 rooms from file.
+2024-08-29 15:57:29,184 - json_parser - INFO - Reading rooms data from file: fake_path
+2024-08-29 15:57:29,185 - json_parser - WARNING - Rooms file is empty.
+2024-08-29 15:57:29,190 - json_parser - INFO - Reading rooms data from file: fake_path
+2024-08-29 15:57:29,190 - json_parser - ERROR - Error reading rooms file: File not found (OSError)
+2024-08-29 15:57:29,198 - json_parser - INFO - Reading rooms data from file: fake_path
+2024-08-29 15:57:29,199 - json_parser - ERROR - Error reading rooms file: Expecting value: line 1 column 1 (char 0) (JSONDecodeError)
+2024-08-29 15:57:29,206 - json_parser - INFO - Reading students data from file: fake_path
+2024-08-29 15:57:29,207 - json_parser - INFO - Successfully parsed 2 students from file.
+2024-08-29 15:57:29,213 - json_parser - INFO - Reading students data from file: fake_path
+2024-08-29 15:57:29,214 - json_parser - WARNING - Students file is empty.
+2024-08-29 15:57:29,220 - json_parser - INFO - Reading students data from file: fake_path
+2024-08-29 15:57:29,221 - json_parser - ERROR - Error reading students file: File not found (OSError)
+2024-08-29 15:57:29,225 - json_parser - INFO - Reading students data from file: fake_path
+2024-08-29 15:57:29,225 - json_parser - ERROR - Error reading students file: Expecting value: line 1 column 1 (char 0) (JSONDecodeError)

@@ -1,15 +1,6 @@
-"""
-This module contains functions for parsing JSON files related to room & students data.
-
-It includes the following functionality:
-- Reading a JSON file and extracting a list of tuples with room IDs and names.
-- Reading a JSON file and extracting a list of tuples with student IDs, names,
-  birthday, sex, and room number.
-"""
-
 import json
 import logging
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 
 # Configure logging to file
@@ -23,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def read_rooms_file(file_path: str) -> List[Tuple[int, str]]:
+def read_rooms_file(file_path: str) -> Optional[List[Tuple[int, str]]]:
     """
     Parses a JSON file and returns a list of tuples.
 
@@ -31,22 +22,26 @@ def read_rooms_file(file_path: str) -> List[Tuple[int, str]]:
         file_path (str): The path to the JSON file.
 
     Returns:
-        List[Tuple[int, str]]: A list of tuples where each tuple contains
-                                an ID and a name from the JSON file.
+        Optional[List[Tuple[int, str]]]: A list of tuples where each tuple contains
+                                         an ID and a name from the JSON file,
+                                         or None if the file is empty.
     """
     logger.info("Reading rooms data from file: %s", file_path)
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
+        if not data:  # If the JSON file is empty
+            logger.warning("Rooms file is empty.")
+            return None
         rooms = [(item["id"], item["name"]) for item in data]
         logger.info("Successfully parsed %d rooms from file.", len(rooms))
         return rooms
     except Exception as e:
-        logger.error("Error reading rooms file: %s", e)
+        logger.error("Error reading rooms file: %s (%s)", e, type(e).__name__)
         raise
 
 
-def read_students_file(file_path: str) -> List[Tuple[int, str, str, str, int]]:
+def read_students_file(file_path: str) -> Optional[List[Tuple[int, str, str, str, int]]]:
     """
     Parses a JSON file and returns a list of tuples.
 
@@ -54,14 +49,17 @@ def read_students_file(file_path: str) -> List[Tuple[int, str, str, str, int]]:
         file_path (str): The path to the JSON file.
 
     Returns:
-        List[Tuple[int, str, str, str, int]]: A list of tuples where each tuple contains
-                                               an ID, name, birthday, sex, and room number
-                                               from the JSON file.
+        Optional[List[Tuple[int, str, str, str, int]]]: A list of tuples where each tuple contains
+                                                        an ID, name, birthday, sex, and room number
+                                                        from the JSON file, or None if the file is empty.
     """
     logger.info("Reading students data from file: %s", file_path)
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
+        if not data:  # If the JSON file is empty
+            logger.warning("Students file is empty.")
+            return None
         students = [
             (
                 item["id"],
@@ -75,5 +73,5 @@ def read_students_file(file_path: str) -> List[Tuple[int, str, str, str, int]]:
         logger.info("Successfully parsed %d students from file.", len(students))
         return students
     except Exception as e:
-        logger.error("Error reading students file: %s", e)
+        logger.error("Error reading students file: %s (%s)", e, type(e).__name__)
         raise

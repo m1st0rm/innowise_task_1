@@ -1,3 +1,18 @@
+"""
+json_parser Module
+
+This module provides functions to read and parse JSON files containing data about rooms and students.
+It includes functions for reading room and student data from JSON files and returning them as lists of tuples.
+Logging is configured to track the parsing process and handle errors.
+
+Functions:
+- read_rooms_file(file_path: str) -> Optional[List[Tuple[int, str]]]:
+    Parses a JSON file containing room data and returns a list of tuples with room IDs and names.
+
+- read_students_file(file_path: str) -> Optional[List[Tuple[int, str, str, str, int]]]:
+    Parses a JSON file containing student data and returns a list of tuples with student details.
+"""
+
 import json
 import logging
 from typing import List, Optional, Tuple

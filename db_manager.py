@@ -193,9 +193,6 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
-            logger.info(
-                "Starting task3: Fetching rooms with the largest age difference among students."
-            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """
@@ -216,4 +213,39 @@ class DbManager:
         except Error as e:
             self.connection.rollback()
             logger.error("Error executing task3: %s (%s)", e, type(e).__name__)
+            raise
+
+    def task4(self) -> List[str]:
+        """
+        Retrieves the names of rooms where students of different sexes reside.
+
+        This method identifies rooms where there are students of at least two distinct sexes.
+        It does this by joining the 'Rooms' and 'Students' tables, grouping the results by room name,
+        and filtering for rooms with more than one distinct sex among students.
+
+        Returns:
+            List[str]: A list of room names where students of different sexes reside.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(
+                """
+                SELECT Rooms.name
+                FROM Rooms
+                LEFT JOIN Students ON Rooms.id = Students.room
+                GROUP BY Rooms.name
+                HAVING COUNT(DISTINCT Students.sex) > 1
+                """
+            )
+            result = [row[0] for row in cursor.fetchall()]
+            self.connection.commit()
+            logger.info("Task4 completed successfully: Fetched %d records.", len(result))
+            return result
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error executing task4: %s (%s)", e, type(e).__name__)
             raise

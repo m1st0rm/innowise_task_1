@@ -218,7 +218,6 @@ class DbManager:
     def task4(self) -> List[str]:
         """
         Retrieves the names of rooms where students of different sexes reside.
-
         This method identifies rooms where there are students of at least two distinct sexes.
         It does this by joining the 'Rooms' and 'Students' tables, grouping the results by room name,
         and filtering for rooms with more than one distinct sex among students.

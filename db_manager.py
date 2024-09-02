@@ -132,9 +132,50 @@ class DbManager:
             )
             result = cursor.fetchall()
             self.connection.commit()
-            logger.info("Successfully retrieved room names and student counts (task1).")
+            logger.info("Task1 completed successfully: Fetched %d records.", len(result))
             return result
         except Error as e:
             self.connection.rollback()
             logger.error("Error executing task 1: %s (%s)", e, type(e).__name__)
+            raise
+
+    def task2(self) -> List[Tuple[str, float]]:
+        """
+        Retrieves the 5 rooms with the smallest average age of students.
+        The age is calculated as the difference between the current date and
+        the student's birthday, converted into years. Results are ordered by ascending
+        average age. Rooms with a NULL average age are excluded.
+
+        Returns:
+            List[Tuple[str, float]]: A list of tuples where each tuple contains the room name
+            and the average age of students in that room, rounded to three decimal places.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info(
+                "Starting task2: Fetching rooms with the smallest average student age."
+            )
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(
+                """
+                SELECT Rooms.name,
+                ROUND(AVG(JULIANDAY('now') - JULIANDAY(Students.birthday)) / 365.25, 3) AS avg_students_age
+                FROM Rooms
+                LEFT JOIN Students ON Rooms.id = Students.room
+                GROUP BY Rooms.name
+                HAVING avg_students_age IS NOT NULL
+                ORDER BY avg_students_age
+                LIMIT 5
+                """
+            )
+            result = cursor.fetchall()
+            self.connection.commit()
+            logger.info("Task2 completed successfully: Fetched %d records.", len(result))
+            return result
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error executing task2: %s (%s)", e, type(e).__name__)
             raise

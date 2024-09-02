@@ -2,7 +2,7 @@
 db_manager Module
 
 This module provides the DBManager class for interacting with an SQLite database.
-It includes methods to insert data into the 'Rooms' and 'Students' tables.
+It includes methods to insert data into the 'Rooms' and 'Students' tables, and methods for specific queries.
 """
 
 import logging
@@ -26,7 +26,8 @@ class DbManager:
     DbManager Class
 
     This class manages the connection to an SQLite database and provides methods
-    for inserting data into the 'Rooms' and 'Students' tables.
+    for inserting data into the 'Rooms' and 'Students' tables, as well as for executing
+    specific queries to retrieve data.
 
     Attributes:
         connection (sqlite3.Connection): The SQLite database connection object.
@@ -104,4 +105,36 @@ class DbManager:
         except Error as e:
             self.connection.rollback()
             logger.error("Error inserting student data: %s (%s)", e, type(e).__name__)
+            raise
+
+    def task1(self) -> List[Tuple[str, int]]:
+        """
+        Retrieves a list of rooms and the count of students in each room.
+
+        Returns:
+            List[Tuple[str, int]]: A list of tuples where each tuple contains the name of the room
+            and the number of students in that room.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(
+                """
+                SELECT Rooms.name, COUNT(Students.id) AS students_count
+                FROM Rooms
+                LEFT JOIN Students ON Rooms.id = Students.room
+                GROUP BY Rooms.name
+                ORDER BY students_count DESC
+            """
+            )
+            result = cursor.fetchall()
+            self.connection.commit()
+            logger.info("Successfully retrieved room names and student counts (task1).")
+            return result
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error executing task 1: %s (%s)", e, type(e).__name__)
             raise

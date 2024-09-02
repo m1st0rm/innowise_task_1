@@ -155,9 +155,6 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
-            logger.info(
-                "Starting task2: Fetching rooms with the smallest average student age."
-            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """
@@ -178,4 +175,45 @@ class DbManager:
         except Error as e:
             self.connection.rollback()
             logger.error("Error executing task2: %s (%s)", e, type(e).__name__)
+            raise
+
+    def task3(self) -> List[Tuple[str, float]]:
+        """
+        Retrieves the 5 rooms with the largest difference in student ages.
+        The age difference is calculated as the difference between the maximum and minimum
+        student ages in each room. The ages are determined based on the difference between
+        the current date and the students' birthdays, converted into years.
+
+        Returns:
+            List[Tuple[str, float]]: A list of tuples where each tuple contains the room name
+            and the age difference of students in that room, rounded to three decimal places.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info(
+                "Starting task3: Fetching rooms with the largest age difference among students."
+            )
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(
+                """
+                SELECT Rooms.name,
+                ROUND((MAX(JULIANDAY('now') - JULIANDAY(Students.birthday)) / 365.25 -
+                MIN(JULIANDAY('now') - JULIANDAY(Students.birthday)) / 365.25), 3) AS age_difference
+                FROM Rooms
+                JOIN Students ON Rooms.id = Students.room
+                GROUP BY Rooms.name
+                ORDER BY age_difference DESC
+                LIMIT 5
+                """
+            )
+            result = cursor.fetchall()
+            self.connection.commit()
+            logger.info("Task3 completed successfully: Fetched %d records.", len(result))
+            return result
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error executing task3: %s (%s)", e, type(e).__name__)
             raise

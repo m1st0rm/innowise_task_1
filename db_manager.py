@@ -166,12 +166,43 @@ class DbManager:
         cursor = self.connection.cursor()
         try:
             logger.info("Fetching data with query: %s", query)
+            self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(query)
             result = cursor.fetchall()
+            self.connection.commit()
             logger.info("Successfully fetched data with query: %s", query)
             return result
         except Error as e:
+            self.connection.rollback()
             logger.error("Error fetching data with query: %s (%s)", e, type(e).__name__)
+            raise
+
+    def create_indexes(self) -> None:
+        """
+        Creates indexes for the 'room' and 'birthday' columns in the 'Students' table.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info(
+                "Creating indexes for the 'room' and 'birthday' columns in the 'Students' table..."
+            )
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_students_room ON Students (room)"
+            )
+            cursor.execute(
+                "CREATE INDEX IF NOT EXISTS idx_students_birthday ON Students (birthday)"
+            )
+            self.connection.commit()
+            logger.info(
+                "Successfully created indexes for the 'room' and 'birthday' columns in the 'Students' table"
+            )
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error creating indexes: %s (%s)", e, type(e).__name__)
             raise
 
     def task1(self) -> List[Tuple[str, int]]:

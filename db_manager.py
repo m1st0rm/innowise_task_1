@@ -8,7 +8,7 @@ It includes methods to insert data into the 'Rooms' and 'Students' tables, and m
 import logging
 import sqlite3
 from sqlite3 import Error
-from typing import List, Tuple
+from typing import Any, List, Tuple
 
 
 logging.basicConfig(
@@ -148,6 +148,30 @@ class DbManager:
         except Error as e:
             self.connection.rollback()
             logger.error("Error executing query: %s (%s)", e, type(e).__name__)
+            raise
+
+    def fetch_all(self, query: str) -> List[Tuple[Any, ...]]:
+        """
+        Executes the given SQL query and returns all results.
+
+        Args:
+            query (str): The SQL query to execute.
+
+        Returns:
+            List[Tuple[Any, ...]]: A list of tuples containing the results of the query.
+
+        Raises:
+            Error: If an error occurs while executing the SQL query.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info("Fetching data with query: %s", query)
+            cursor.execute(query)
+            result = cursor.fetchall()
+            logger.info("Successfully fetched data with query: %s", query)
+            return result
+        except Error as e:
+            logger.error("Error fetching data with query: %s (%s)", e, type(e).__name__)
             raise
 
     def task1(self) -> List[Tuple[str, int]]:

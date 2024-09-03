@@ -112,23 +112,30 @@ class DbManager:
     def clear_tables(self) -> None:
         """
         Clears all data from the 'Rooms' and 'Students' tables without deleting the tables themselves.
+        Also drops the indexes created for these tables.
 
         Raises:
             Error: If an error occurs while executing the SQL queries.
         """
         cursor = self.connection.cursor()
         try:
-            logger.info("Cleating data from Rooms and Students tables...")
+            logger.info(
+                "Clearing data from Rooms and Students tables and dropping indexes..."
+            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute("DELETE FROM Students")
             cursor.execute("DELETE FROM Rooms")
+            cursor.execute("DROP INDEX IF EXISTS idx_students_room")
+            cursor.execute("DROP INDEX IF EXISTS idx_students_birthday")
             self.connection.commit()
             logger.info(
-                "Successfully cleared all data from the Rooms and Students tables."
+                "Successfully cleared all data from the Rooms and Students tables and dropped indexes."
             )
         except Error as e:
             self.connection.rollback()
-            logger.error("Error clearing tables: %s (%s)", e, type(e).__name__)
+            logger.error(
+                "Error clearing tables and dropping indexes: %s (%s)", e, type(e).__name__
+            )
             raise
 
     def execute_query(self, query: str) -> None:

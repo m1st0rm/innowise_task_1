@@ -18,7 +18,6 @@ import logging
 from typing import List, Optional, Tuple
 
 
-# Configure logging to file
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",

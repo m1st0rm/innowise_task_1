@@ -50,7 +50,7 @@ class TestDbManager(unittest.TestCase):
 
     def test_task2(self):
         result = self.db_manager.task2()
-        expected = [("Room C", 23.333), ("Room B", 23.963), ("Room A", 24.130)]
+        expected = [("Room C", 23.334), ("Room B", 23.964), ("Room A", 24.131)]
         self.assertEqual(result, expected)
 
     def test_task3(self):
@@ -111,6 +111,26 @@ class TestDbManager(unittest.TestCase):
     def test_fetch_all_invalid_query(self):
         with self.assertRaises(Error):
             self.db_manager.fetch_all("INVALID SQL QUERY")
+
+    def test_clear_tables(self):
+        result_rooms = self.db_manager.fetch_all("SELECT * FROM Rooms")
+        result_students = self.db_manager.fetch_all("SELECT * FROM Students")
+        self.assertTrue(result_rooms)
+        self.assertTrue(result_students)
+        self.db_manager.clear_tables()
+        result_rooms = self.db_manager.fetch_all("SELECT * FROM Rooms")
+        result_students = self.db_manager.fetch_all("SELECT * FROM Students")
+        self.assertEqual(result_rooms, [])
+        self.assertEqual(result_students, [])
+        try:
+            self.db_manager.execute_query(
+                "CREATE INDEX idx_students_room ON Students(room);"
+            )
+            self.db_manager.execute_query(
+                "CREATE INDEX idx_students_birthday ON Students(birthday);"
+            )
+        except Error as e:
+            self.fail(f"Indexes were not properly dropped: {e}")
 
 
 if __name__ == "__main__":

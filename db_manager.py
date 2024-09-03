@@ -73,6 +73,7 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info("Inserting room data...")
             self.connection.execute("BEGIN TRANSACTION")
             cursor.executemany("INSERT INTO Rooms (id, name) VALUES (?, ?)", rooms)
             self.connection.commit()
@@ -95,6 +96,7 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info("Inserting student data...")
             self.connection.execute("BEGIN TRANSACTION")
             cursor.executemany(
                 "INSERT INTO Students (id, name, birthday, sex, room) VALUES (?, ?, ?, ?, ?)",
@@ -120,6 +122,7 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info("Starting task1: Retrieving rooms and student counts...")
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """
@@ -155,6 +158,9 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info(
+                "Starting task2: Retrieving rooms with the smallest average student age..."
+            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """
@@ -193,6 +199,9 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info(
+                "Starting task3: Retrieving rooms with the largest difference in student ages..."
+            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """
@@ -230,6 +239,9 @@ class DbManager:
         """
         cursor = self.connection.cursor()
         try:
+            logger.info(
+                "Starting task4: Retrieving rooms with students of different sexes..."
+            )
             self.connection.execute("BEGIN TRANSACTION")
             cursor.execute(
                 """

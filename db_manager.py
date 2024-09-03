@@ -109,6 +109,28 @@ class DbManager:
             logger.error("Error inserting student data: %s (%s)", e, type(e).__name__)
             raise
 
+    def clear_tables(self) -> None:
+        """
+        Clears all data from the 'Rooms' and 'Students' tables without deleting the tables themselves.
+
+        Raises:
+            Error: If an error occurs while executing the SQL queries.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info("Cleating data from Rooms and Students tables...")
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute("DELETE FROM Students")
+            cursor.execute("DELETE FROM Rooms")
+            self.connection.commit()
+            logger.info(
+                "Successfully cleared all data from the Rooms and Students tables."
+            )
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error clearing tables: %s (%s)", e, type(e).__name__)
+            raise
+
     def task1(self) -> List[Tuple[str, int]]:
         """
         Retrieves a list of rooms and the count of students in each room.

@@ -33,14 +33,14 @@ class DbManager:
         connection (sqlite3.Connection): The SQLite database connection object.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, db_path: str = "database.db") -> None:
         """
         Initializes the connection to the SQLite database.
-        Establishes a connection to 'database.db'. Raises an exception if the connection fails.
+        Establishes a connection to db_path database. Raises an exception if the connection fails.
         """
         self.connection = None
         try:
-            self.connection = sqlite3.connect("database.db")
+            self.connection = sqlite3.connect(db_path)
             logger.info("Database connection established.")
         except Error as e:
             logger.error("Error connecting to the database: %s (%s)", e, type(e).__name__)

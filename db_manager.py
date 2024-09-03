@@ -131,6 +131,25 @@ class DbManager:
             logger.error("Error clearing tables: %s (%s)", e, type(e).__name__)
             raise
 
+    def execute_query(self, query: str) -> None:
+        """
+        Executes the SQL-query passed as an argument in the database to which the connection is currently established.
+
+        Raises:
+            Error: If an error occurs while executing the SQL queries.
+        """
+        cursor = self.connection.cursor()
+        try:
+            logger.info("Executing query: %s", query)
+            self.connection.execute("BEGIN TRANSACTION")
+            cursor.execute(query)
+            self.connection.commit()
+            logger.info("Successfully executed query: %s", query)
+        except Error as e:
+            self.connection.rollback()
+            logger.error("Error executing query: %s (%s)", e, type(e).__name__)
+            raise
+
     def task1(self) -> List[Tuple[str, int]]:
         """
         Retrieves a list of rooms and the count of students in each room.

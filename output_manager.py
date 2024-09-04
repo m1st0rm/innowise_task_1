@@ -3,21 +3,23 @@ output_manager Module
 
 This module provides functions to convert data into JSON and XML formats and save them to files.
 It includes functions for converting lists of tuples into JSON and XML files and returning the absolute file paths.
-Logging is configured to track the conversion process and handle errors.
+Logging is configured to track the conversion process and handle errors, including cases where the input data is empty.
 
 Functions:
-- output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
+- output_json(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
     Converts data to JSON format, writes it to a file, and returns the absolute file path.
+    If the data is empty, a warning is logged, and no file is created.
 
-- output_xml(data: List[Tuple[Any, ...]], task_number: str) -> str:
+- output_xml(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
     Converts data to XML format, writes it to a file, and returns the absolute file path.
+    If the data is empty, a warning is logged, and no file is created.
 """
 
 import json
 import logging
 import os
 import xml.etree.ElementTree as ET
-from typing import Any, List, Tuple
+from typing import Any, List, Optional, Tuple
 from xml.dom import minidom
 
 
@@ -31,7 +33,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
+def output_json(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
     """
     Converts the tasks data into a JSON-formatted string, writes it to a file,
     and returns the absolute file path.
@@ -41,9 +43,14 @@ def output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
         task_number (str): The task number that provides the data.
 
     Returns:
-        str: The absolute path to the written JSON file.
+        Optional[str]: The absolute path to the written JSON file, or None if the data is empty.
     """
     logger.info("Converting the %s data to JSON...", task_number)
+    if not data:
+        logger.warning(
+            "The %s data is empty. JSON file will not be created.", task_number
+        )
+        return None
     try:
         json_data = json.dumps(data, indent=4, ensure_ascii=False)
         file_path = f"{task_number}_output.json"
@@ -59,7 +66,7 @@ def output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
         raise
 
 
-def output_xml(data: List[Tuple[Any, ...]], task_number: str) -> str:
+def output_xml(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
     """
     Converts the tasks data into XML-formatted string, writes it to a file,
     and returns the absolute file path.
@@ -69,9 +76,12 @@ def output_xml(data: List[Tuple[Any, ...]], task_number: str) -> str:
         task_number (str): The task number that provides the data.
 
     Returns:
-        str: The absolute path to the written XML file.
+        Optional[str]: The absolute path to the written XML file, or None if the data is empty.
     """
     logger.info("Converting the %s data to XML...", task_number)
+    if not data:
+        logger.warning("The %s data is empty. XML file will not be created.", task_number)
+        return None
 
     def tuple_to_xml(tag, tpl):
         elem = ET.Element(tag)

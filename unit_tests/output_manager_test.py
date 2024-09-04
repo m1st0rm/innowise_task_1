@@ -59,6 +59,14 @@ class OutputManagerTest(unittest.TestCase):
         with self.assertRaises(OSError):
             output_xml(self.xml_data, self.task_number)
 
+    def test_output_json_empty_data(self):
+        result_path = output_json([], self.task_number)
+        self.assertIsNone(result_path)
+
+    def test_output_xml_empty_data(self):
+        result_path = output_xml([], self.task_number)
+        self.assertIsNone(result_path)
+
 
 if __name__ == "__main__":
     unittest.main()

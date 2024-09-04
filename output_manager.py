@@ -1,26 +1,26 @@
 import json
 import logging
 import os
-from typing import Any, List
+from typing import Any, List, Tuple
 
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("logs/json_parser.log"),
+        logging.FileHandler("logs/output_manager.log"),
     ],
 )
 logger = logging.getLogger(__name__)
 
 
-def output_json(data: List[Any], task_number: str) -> str:
+def output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
     """
     Converts the tasks data into a JSON-formatted string, writes it to a file,
     and returns the absolute file path.
 
     Args:
-        data (List[Any]): The data to be converted to JSON format.
+        data (List[Tuple[Any, ...]]): The data to be converted to JSON format.
         task_number (str): The task number that provides the data.
 
     Returns:

@@ -18,6 +18,7 @@ import logging
 import os
 import xml.etree.ElementTree as ET
 from typing import Any, List, Tuple
+from xml.dom import minidom
 
 
 logging.basicConfig(
@@ -83,9 +84,12 @@ def output_xml(data: List[Tuple[Any, ...]], task_number: str) -> str:
         root = ET.Element("root")
         for item in data:
             root.append(tuple_to_xml("data", item))
-        tree = ET.ElementTree(root)
+        xml_str = ET.tostring(root, encoding="utf-8")
+        parsed_xml = minidom.parseString(xml_str)
+        pretty_xml_str = parsed_xml.toprettyxml(indent="    ")
         file_path = f"{task_number}_output.xml"
-        tree.write(file_path, encoding="utf-8", xml_declaration=True)
+        with open(file_path, "w", encoding="utf-8") as file:
+            file.write(pretty_xml_str)
         logger.info("Successfully converted the %s data to XML.", task_number)
         return os.path.abspath(file_path)
     except (OSError, IOError) as e:

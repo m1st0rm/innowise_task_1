@@ -1,3 +1,18 @@
+"""
+output_manager Module
+
+This module provides functions to convert data into JSON and XML formats and save them to files.
+It includes functions for converting lists of tuples into JSON and XML files and returning the absolute file paths.
+Logging is configured to track the conversion process and handle errors.
+
+Functions:
+- output_json(data: List[Tuple[Any, ...]], task_number: str) -> str:
+    Converts data to JSON format, writes it to a file, and returns the absolute file path.
+
+- output_xml(data: List[Tuple[Any, ...]], task_number: str) -> str:
+    Converts data to XML format, writes it to a file, and returns the absolute file path.
+"""
+
 import json
 import logging
 import os

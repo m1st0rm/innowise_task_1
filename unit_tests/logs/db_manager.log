@@ -1,252 +1,252 @@
-2024-09-03 19:11:08,180 - db_manager - INFO - Database connection established.
-2024-09-03 19:11:08,190 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,206 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,207 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,212 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,212 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,218 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,218 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,226 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,226 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,233 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,233 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,239 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,239 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,246 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,246 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,251 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,252 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,252 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,252 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
-2024-09-03 19:11:08,253 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
-2024-09-03 19:11:08,253 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,258 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,259 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,259 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,259 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
-2024-09-03 19:11:08,260 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
-2024-09-03 19:11:08,260 - db_manager - INFO - Executing query: CREATE INDEX idx_students_room ON Students(room);
-2024-09-03 19:11:08,267 - db_manager - INFO - Successfully executed query: CREATE INDEX idx_students_room ON Students(room);
-2024-09-03 19:11:08,267 - db_manager - INFO - Executing query: CREATE INDEX idx_students_birthday ON Students(birthday);
-2024-09-03 19:11:08,273 - db_manager - INFO - Successfully executed query: CREATE INDEX idx_students_birthday ON Students(birthday);
-2024-09-03 19:11:08,273 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,279 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,280 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,288 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,288 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,295 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,295 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,301 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,301 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,308 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,308 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,316 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,316 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,322 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,322 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,328 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,328 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,334 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,334 - db_manager - INFO - Executing query: INVALID SQL QUERY
-2024-09-03 19:11:08,334 - db_manager - ERROR - Error executing query: near "INVALID": syntax error (OperationalError)
-2024-09-03 19:11:08,334 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,341 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,342 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,350 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,350 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,356 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,357 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,365 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,365 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,372 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,372 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,378 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,378 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,384 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,384 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,390 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,391 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,398 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,399 - db_manager - INFO - Fetching data with query: INVALID SQL QUERY
-2024-09-03 19:11:08,399 - db_manager - ERROR - Error fetching data with query: near "INVALID": syntax error (OperationalError)
-2024-09-03 19:11:08,399 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,405 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,406 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,412 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,413 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,418 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,419 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,425 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,425 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,431 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,432 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,438 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,438 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,443 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,444 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,450 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,450 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,455 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,456 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,462 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,462 - db_manager - INFO - Inserting room data...
-2024-09-03 19:11:08,467 - db_manager - INFO - Successfully added 2 room(s).
-2024-09-03 19:11:08,467 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,468 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
-2024-09-03 19:11:08,468 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,474 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,474 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,482 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,482 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,490 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,490 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,499 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,499 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,506 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,507 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,513 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,514 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,520 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,521 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,527 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,527 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,532 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,532 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,539 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,539 - db_manager - INFO - Inserting room data...
-2024-09-03 19:11:08,546 - db_manager - INFO - Successfully added 1 room(s).
-2024-09-03 19:11:08,546 - db_manager - INFO - Inserting room data...
-2024-09-03 19:11:08,547 - db_manager - ERROR - Error inserting room data: UNIQUE constraint failed: Rooms.id (IntegrityError)
-2024-09-03 19:11:08,547 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,553 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,554 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,561 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,562 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,570 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,570 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,579 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,579 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,586 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,586 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,592 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,592 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,599 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,599 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,606 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,606 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,613 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,613 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,619 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,619 - db_manager - INFO - Inserting room data...
-2024-09-03 19:11:08,626 - db_manager - INFO - Successfully added 1 room(s).
-2024-09-03 19:11:08,626 - db_manager - INFO - Inserting student data...
-2024-09-03 19:11:08,634 - db_manager - INFO - Successfully added 2 student(s).
-2024-09-03 19:11:08,635 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
-2024-09-03 19:11:08,635 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
-2024-09-03 19:11:08,636 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,642 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,643 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,649 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,649 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,655 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,655 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,660 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,661 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,666 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,666 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,673 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,673 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,680 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,680 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,687 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,688 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,695 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,696 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,704 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,704 - db_manager - INFO - Inserting room data...
-2024-09-03 19:11:08,710 - db_manager - INFO - Successfully added 1 room(s).
-2024-09-03 19:11:08,711 - db_manager - INFO - Inserting student data...
-2024-09-03 19:11:08,713 - db_manager - ERROR - Error inserting student data: UNIQUE constraint failed: Students.id (IntegrityError)
-2024-09-03 19:11:08,713 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,719 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,721 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,727 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,728 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,736 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,736 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,742 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,743 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,750 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,750 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,758 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,758 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,764 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,764 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,770 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,770 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,777 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,777 - db_manager - INFO - Starting task1: Retrieving rooms and student counts...
-2024-09-03 19:11:08,778 - db_manager - INFO - Task1 completed successfully: Fetched 3 records.
-2024-09-03 19:11:08,779 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,784 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,785 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,791 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,791 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,797 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,797 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,803 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,803 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,809 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,810 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,816 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,816 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,822 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,822 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,827 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,827 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,833 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,833 - db_manager - INFO - Starting task2: Retrieving rooms with the smallest average student age...
-2024-09-03 19:11:08,834 - db_manager - INFO - Task2 completed successfully: Fetched 3 records.
-2024-09-03 19:11:08,834 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,841 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,842 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,849 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,849 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,856 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,856 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,862 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,863 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,869 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,870 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,877 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,877 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,883 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,883 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,890 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,890 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,897 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,897 - db_manager - INFO - Starting task3: Retrieving rooms with the largest difference in student ages...
-2024-09-03 19:11:08,899 - db_manager - INFO - Task3 completed successfully: Fetched 3 records.
-2024-09-03 19:11:08,899 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,907 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,908 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,921 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
-2024-09-03 19:11:08,922 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,928 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
-2024-09-03 19:11:08,928 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,935 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
-2024-09-03 19:11:08,935 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,942 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
-2024-09-03 19:11:08,942 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,948 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
-2024-09-03 19:11:08,949 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,955 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
-2024-09-03 19:11:08,956 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,962 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
-2024-09-03 19:11:08,963 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,970 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
-2024-09-03 19:11:08,970 - db_manager - INFO - Starting task4: Retrieving rooms with students of different sexes...
-2024-09-03 19:11:08,971 - db_manager - INFO - Task4 completed successfully: Fetched 2 records.
-2024-09-03 19:11:08,971 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
-2024-09-03 19:11:08,977 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
-2024-09-03 19:11:08,978 - db_manager - INFO - Database connection closed.
+2024-09-05 11:51:41,346 - db_manager - INFO - Database connection established.
+2024-09-05 11:51:41,347 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,356 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,356 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,359 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,359 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,362 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,362 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,365 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,365 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,369 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,369 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,372 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,372 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,375 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,375 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,378 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,378 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,379 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,379 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
+2024-09-05 11:51:41,379 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
+2024-09-05 11:51:41,379 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,382 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,382 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,382 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,382 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
+2024-09-05 11:51:41,382 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
+2024-09-05 11:51:41,382 - db_manager - INFO - Executing query: CREATE INDEX idx_students_room ON Students(room);
+2024-09-05 11:51:41,385 - db_manager - INFO - Successfully executed query: CREATE INDEX idx_students_room ON Students(room);
+2024-09-05 11:51:41,385 - db_manager - INFO - Executing query: CREATE INDEX idx_students_birthday ON Students(birthday);
+2024-09-05 11:51:41,388 - db_manager - INFO - Successfully executed query: CREATE INDEX idx_students_birthday ON Students(birthday);
+2024-09-05 11:51:41,389 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,391 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,392 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,394 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,394 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,397 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,397 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,400 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,400 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,403 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,403 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,406 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,406 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,409 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,409 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,411 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,411 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,414 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,414 - db_manager - INFO - Executing query: INVALID SQL QUERY
+2024-09-05 11:51:41,414 - db_manager - ERROR - Error executing query: near "INVALID": syntax error (OperationalError)
+2024-09-05 11:51:41,414 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,417 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,417 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,420 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,420 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,423 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,423 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,426 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,426 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,429 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,429 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,432 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,432 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,435 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,435 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,437 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,437 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,439 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,439 - db_manager - INFO - Fetching data with query: INVALID SQL QUERY
+2024-09-05 11:51:41,439 - db_manager - ERROR - Error fetching data with query: near "INVALID": syntax error (OperationalError)
+2024-09-05 11:51:41,439 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,442 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,443 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,446 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,446 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,449 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,449 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,453 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,453 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,456 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,456 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,458 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,458 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,461 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,461 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,464 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,464 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,467 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,467 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,468 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,468 - db_manager - INFO - Inserting room data...
+2024-09-05 11:51:41,471 - db_manager - INFO - Successfully added 2 room(s).
+2024-09-05 11:51:41,471 - db_manager - INFO - Fetching data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,471 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Rooms
+2024-09-05 11:51:41,471 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,474 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,474 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,477 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,477 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,480 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,480 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,483 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,483 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,487 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,487 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,488 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,489 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,491 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,491 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,494 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,494 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,497 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,497 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,499 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,499 - db_manager - INFO - Inserting room data...
+2024-09-05 11:51:41,502 - db_manager - INFO - Successfully added 1 room(s).
+2024-09-05 11:51:41,502 - db_manager - INFO - Inserting room data...
+2024-09-05 11:51:41,502 - db_manager - ERROR - Error inserting room data: UNIQUE constraint failed: Rooms.id (IntegrityError)
+2024-09-05 11:51:41,502 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,505 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,505 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,508 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,508 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,511 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,511 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,514 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,514 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,517 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,517 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,520 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,520 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,522 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,523 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,525 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,525 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,528 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,528 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,530 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,530 - db_manager - INFO - Inserting room data...
+2024-09-05 11:51:41,533 - db_manager - INFO - Successfully added 1 room(s).
+2024-09-05 11:51:41,533 - db_manager - INFO - Inserting student data...
+2024-09-05 11:51:41,536 - db_manager - INFO - Successfully added 2 student(s).
+2024-09-05 11:51:41,536 - db_manager - INFO - Fetching data with query: SELECT * FROM Students
+2024-09-05 11:51:41,536 - db_manager - INFO - Successfully fetched data with query: SELECT * FROM Students
+2024-09-05 11:51:41,536 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,539 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,539 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,542 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,542 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,545 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,545 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,548 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,548 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,551 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,551 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,554 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,554 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,557 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,557 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,560 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,560 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,563 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,563 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,565 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,565 - db_manager - INFO - Inserting room data...
+2024-09-05 11:51:41,568 - db_manager - INFO - Successfully added 1 room(s).
+2024-09-05 11:51:41,568 - db_manager - INFO - Inserting student data...
+2024-09-05 11:51:41,569 - db_manager - ERROR - Error inserting student data: UNIQUE constraint failed: Students.id (IntegrityError)
+2024-09-05 11:51:41,569 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,572 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,572 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,575 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,575 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,578 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,578 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,580 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,580 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,583 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,583 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,585 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,585 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,588 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,588 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,591 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,591 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,594 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,594 - db_manager - INFO - Starting task1: Retrieving rooms and student counts...
+2024-09-05 11:51:41,595 - db_manager - INFO - Task1 completed successfully: Fetched 3 records.
+2024-09-05 11:51:41,595 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,598 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,598 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,601 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,601 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,604 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,604 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,607 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,607 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,610 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,610 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,612 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,613 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,615 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,615 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,619 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,619 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,622 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,622 - db_manager - INFO - Starting task2: Retrieving rooms with the smallest average student age...
+2024-09-05 11:51:41,622 - db_manager - INFO - Task2 completed successfully: Fetched 3 records.
+2024-09-05 11:51:41,622 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,625 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,626 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,629 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,629 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,632 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,632 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,635 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,635 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,638 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,638 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,641 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,641 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,644 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,644 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,647 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,647 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,650 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,650 - db_manager - INFO - Starting task3: Retrieving rooms with the largest difference in student ages...
+2024-09-05 11:51:41,651 - db_manager - INFO - Task3 completed successfully: Fetched 3 records.
+2024-09-05 11:51:41,651 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,653 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,653 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,657 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (1, 'Room A')
+2024-09-05 11:51:41,657 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,660 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (2, 'Room B')
+2024-09-05 11:51:41,660 - db_manager - INFO - Executing query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,663 - db_manager - INFO - Successfully executed query: INSERT INTO Rooms (id, name) VALUES (3, 'Room C')
+2024-09-05 11:51:41,663 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,666 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (1, 'Alice', '2000-01-01T00:00:00.000000', 'F', 1)
+2024-09-05 11:51:41,666 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,669 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (2, 'Bob', '2001-02-02T00:00:00.000000', 'M', 1)
+2024-09-05 11:51:41,669 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,672 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (3, 'Charlie', '1999-03-03T00:00:00.000000', 'M', 2)
+2024-09-05 11:51:41,672 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,675 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (4, 'Diana', '2002-04-04T00:00:00.000000', 'F', 2)
+2024-09-05 11:51:41,675 - db_manager - INFO - Executing query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,679 - db_manager - INFO - Successfully executed query: INSERT INTO Students (id, name, birthday, sex, room) VALUES (5, 'Eve', '2001-05-05T00:00:00.000000', 'F', 3)
+2024-09-05 11:51:41,679 - db_manager - INFO - Starting task4: Retrieving rooms with students of different sexes...
+2024-09-05 11:51:41,679 - db_manager - INFO - Task4 completed successfully: Fetched 2 records.
+2024-09-05 11:51:41,679 - db_manager - INFO - Clearing data from Rooms and Students tables and dropping indexes...
+2024-09-05 11:51:41,682 - db_manager - INFO - Successfully cleared all data from the Rooms and Students tables and dropped indexes.
+2024-09-05 11:51:41,682 - db_manager - INFO - Database connection closed.

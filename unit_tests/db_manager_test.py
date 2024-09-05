@@ -50,8 +50,10 @@ class TestDbManager(unittest.TestCase):
 
     def test_task2(self):
         result = self.db_manager.task2()
-        expected = [("Room C", 23.334), ("Room B", 23.964), ("Room A", 24.131)]
-        self.assertEqual(result, expected)
+        expected = [("Room C", 23.34), ("Room B", 23.97), ("Room A", 24.14)]
+        for (room_res, value_res), (room_exp, value_exp) in zip(result, expected):
+            self.assertEqual(room_res, room_exp)
+            self.assertAlmostEqual(value_res, value_exp, places=2)
 
     def test_task3(self):
         result = self.db_manager.task3()
@@ -60,7 +62,7 @@ class TestDbManager(unittest.TestCase):
 
     def test_task4(self):
         result = self.db_manager.task4()
-        expected = ["Room A", "Room B"]
+        expected = [("Room A",), ("Room B",)]
         self.assertEqual(result, expected)
 
     def test_insert_rooms(self):

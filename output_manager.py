@@ -62,10 +62,10 @@ def output_json(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
         logger.info("Successfully converted the %s data to JSON.", task_number)
         return os.path.abspath(file_path)
     except (OSError, IOError) as e:
-        logging.error("Error writing the %s data JSON to file: %s", task_number, e)
+        logger.error("Error writing the %s data JSON to file: %s", task_number, e)
         raise
     except json.JSONDecodeError as e:
-        logging.error("Error serializing the %s data to JSON: %s", task_number, e)
+        logger.error("Error serializing the %s data to JSON: %s", task_number, e)
         raise
 
 
@@ -106,8 +106,8 @@ def output_xml(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:
         logger.info("Successfully converted the %s data to XML.", task_number)
         return os.path.abspath(file_path)
     except (OSError, IOError) as e:
-        logging.error("Error writing the %s data XML to file: %s", task_number, e)
+        logger.error("Error writing the %s data XML to file: %s", task_number, e)
         raise
     except Exception as e:
-        logging.error("Error writing the %s data XML to file: %s", task_number, e)
+        logger.error("Error writing the %s data XML to file: %s", task_number, e)
         raise

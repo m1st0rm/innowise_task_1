@@ -327,7 +327,7 @@ class DbManager:
             logger.error("Error executing task3: %s (%s)", e, type(e).__name__)
             raise
 
-    def task4(self) -> List[str]:
+    def task4(self) -> List[Tuple[str]]:
         """
         Retrieves the names of rooms where students of different sexes reside.
         This method identifies rooms where there are students of at least two distinct sexes.
@@ -335,7 +335,7 @@ class DbManager:
         and filtering for rooms with more than one distinct sex among students.
 
         Returns:
-            List[str]: A list of room names where students of different sexes reside.
+            List[Tuple[str]]: A list of tuples where each contains room name where students of different sexes reside.
 
         Raises:
             Error: If an error occurs while executing the SQL query.
@@ -355,7 +355,7 @@ class DbManager:
                 HAVING COUNT(DISTINCT Students.sex) > 1
                 """
             )
-            result = [row[0] for row in cursor.fetchall()]
+            result = cursor.fetchall()
             self.connection.commit()
             logger.info("Task4 completed successfully: Fetched %d records.", len(result))
             return result

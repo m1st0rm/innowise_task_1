@@ -18,14 +18,17 @@ import logging
 from typing import List, Optional, Tuple
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/json_parser.log"),
-    ],
-)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("json_parser_logger")
+logger.setLevel(logging.INFO)
+handler = logging.FileHandler("logs/json_parser.log")
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+handler.setFormatter(formatter)
+
+if not logger.hasHandlers():
+    logger.addHandler(handler)
+
+logger.propagate = False
 
 
 def read_rooms_file(file_path: str) -> Optional[List[Tuple[int, str]]]:

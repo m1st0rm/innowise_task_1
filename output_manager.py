@@ -23,14 +23,17 @@ from typing import Any, List, Optional, Tuple
 from xml.dom import minidom
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/output_manager.log"),
-    ],
-)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("output_manager_logger")
+logger.setLevel(logging.INFO)
+handler = logging.FileHandler("logs/output_manager.log")
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+handler.setFormatter(formatter)
+
+if not logger.hasHandlers():
+    logger.addHandler(handler)
+
+logger.propagate = False
 
 
 def output_json(data: List[Tuple[Any, ...]], task_number: str) -> Optional[str]:

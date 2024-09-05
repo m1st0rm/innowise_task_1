@@ -11,14 +11,17 @@ from sqlite3 import Error
 from typing import Any, List, Tuple
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/db_manager.log"),
-    ],
-)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("db_manager_logger")
+logger.setLevel(logging.INFO)
+handler = logging.FileHandler("logs/db_manager.log")
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+handler.setFormatter(formatter)
+
+if not logger.hasHandlers():
+    logger.addHandler(handler)
+
+logger.propagate = False
 
 
 class DbManager:

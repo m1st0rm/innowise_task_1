@@ -1,0 +1,8 @@
+2024-09-18 11:38:35,126 - json_parser_logger - INFO - Reading rooms data from file: rooms.json
+2024-09-18 11:38:35,128 - json_parser_logger - INFO - Successfully parsed 1000 rooms from file.
+2024-09-18 11:38:35,128 - json_parser_logger - INFO - Reading students data from file: students.json
+2024-09-18 11:38:35,140 - json_parser_logger - INFO - Successfully parsed 10000 students from file.
+2024-09-18 11:38:53,991 - json_parser_logger - INFO - Reading rooms data from file: rooms.json
+2024-09-18 11:38:53,992 - json_parser_logger - INFO - Successfully parsed 1000 rooms from file.
+2024-09-18 11:38:53,992 - json_parser_logger - INFO - Reading students data from file: students.json
+2024-09-18 11:38:54,004 - json_parser_logger - INFO - Successfully parsed 10000 students from file.
